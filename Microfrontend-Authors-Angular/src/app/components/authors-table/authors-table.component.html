@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Apellido</th>
+			<th scope="col">Nacionalidad</th>
+			<th scope="col"># Libros</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (author of authors; track author) {
+			<tr>
+				<th scope="row">{{ author.id }}</th>
+				<td>{{ author.name }}</td>
+				<td>{{ author.lastName }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="author.nationality"
+						[type]="nationalityMap[author.nationality]">
+					</dsb-badge-atom>
+				</td>
+				<td>{{ author.booksCount }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
