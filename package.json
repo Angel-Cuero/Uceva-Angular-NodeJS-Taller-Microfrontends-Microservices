@@ -9,27 +9,27 @@
     "install:ms-prods": "npm --prefix Microservice-Products-NodeJS install",
     "install:ms-movie": "npm --prefix Microservice-Movies-NodeJS install",
     "install:ms-books": "npm --prefix Microservice-Books-NodeJS install",
-    "install:ms-auth":  "npm --prefix Microservice-Authors-NodeJS install",
-    "install:host":      "npm --prefix Client-Host-Angular install",
-    "install:mf-users":  "npm --prefix Microfrontend-Users-Angular install",
-    "install:mf-prods":  "npm --prefix Microfrontend-Products-Angular install",
-    "install:mf-movie":  "npm --prefix Microfrontend-Movies-Angular install",
-    "install:mf-books":  "npm --prefix Microfrontend-Books-Angular install",
-    "install:mf-auth":   "npm --prefix Microfrontend-Authors-Angular install",
+    "install:ms-auth": "npm --prefix Microservice-Authors-NodeJS install",
+    "install:host": "npm --prefix Client-Host-Angular install",
+    "install:mf-users": "npm --prefix Microfrontend-Users-Angular install",
+    "install:mf-prods": "npm --prefix Microfrontend-Products-Angular install",
+    "install:mf-movie": "npm --prefix Microfrontend-Movies-Angular install",
+    "install:mf-books": "npm --prefix Microfrontend-Books-Angular install",
+    "install:mf-auth": "npm --prefix Microfrontend-Authors-Angular install",
     "start": "concurrently --kill-others --names \"USERS-MS,PRODS-MS,MOVIE-MS,BOOKS-MS,AUTH-MS,HOST,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH\" \"npm:start:ms-users\" \"npm:start:ms-prods\" \"npm:start:ms-movie\" \"npm:start:ms-books\" \"npm:start:ms-auth\" \"npm:start:host\" \"npm:start:mf-users\" \"npm:start:mf-prods\" \"npm:start:mf-movie\" \"npm:start:mf-books\" \"npm:start:mf-auth\"",
     "start:ms-users": "npm --prefix Microservice-Users-NodeJS run start",
     "start:ms-prods": "npm --prefix Microservice-Products-NodeJS run start",
     "start:ms-movie": "npm --prefix Microservice-Movies-NodeJS run start",
     "start:ms-books": "npm --prefix Microservice-Books-NodeJS run start",
-    "start:ms-auth":  "npm --prefix Microservice-Authors-NodeJS run start",
-    "start:host":      "npm --prefix Client-Host-Angular run start",
-    "start:mf-users":  "npm --prefix Microfrontend-Users-Angular run start",
-    "start:mf-prods":  "npm --prefix Microfrontend-Products-Angular run start",
-    "start:mf-movie":  "npm --prefix Microfrontend-Movies-Angular run start",
-    "start:mf-books":  "npm --prefix Microfrontend-Books-Angular run start",
-    "start:mf-auth":   "npm --prefix Microfrontend-Authors-Angular run start"
+    "start:ms-auth": "npm --prefix Microservice-Authors-NodeJS run start",
+    "start:host": "npm --prefix Client-Host-Angular run start",
+    "start:mf-users": "npm --prefix Microfrontend-Users-Angular run start",
+    "start:mf-prods": "npm --prefix Microfrontend-Products-Angular run start",
+    "start:mf-movie": "npm --prefix Microfrontend-Movies-Angular run start",
+    "start:mf-books": "npm --prefix Microfrontend-Books-Angular run start",
+    "start:mf-auth": "npm --prefix Microfrontend-Authors-Angular run start"
   },
   "devDependencies": {
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.2.5"
   }
 }
