@@ -34,6 +34,11 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 
 ### 2️⃣ Ejecutar los Proyectos
 
+**Opción 1: Ejecutar todo desde la raíz (Recomendado)**
+- Ubícate en la raíz del repositorio y ejecuta: ```npm start```
+- Esto levantará todos los microservicios (3001-3005), los microfrontends (4201-4205) y el host (4200) al mismo tiempo usando `concurrently`.
+
+**Opción 2: Ejecutar cada proyecto por separado**
 - Ubícate en la raíz del proyecto de Microservice-Users-NodeJS y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microservice-Movies-NodeJS y ejecuta el comando: ```npm run start```
