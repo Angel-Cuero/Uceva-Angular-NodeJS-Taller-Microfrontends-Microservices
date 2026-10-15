@@ -1,0 +1,15 @@
+@switch(state){
+
+    @case('loading'){
+        <app-alert alertState="loading" text="Cargando Películas..." ></app-alert>
+    }
+
+    @case('error'){
+        <app-alert alertState="error" text="Error al Cargar las Películas" ></app-alert>
+    }
+
+    @case('success'){
+        <app-movies-table [movies]="movies" ></app-movies-table>
+    }
+
+}
