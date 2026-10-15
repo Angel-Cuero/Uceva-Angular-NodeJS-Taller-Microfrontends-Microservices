@@ -22,6 +22,9 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Ubícate en la raíz del proyecto de Client-Host-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Movies-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Books-Angular y ejecuta el comando: ```npm i```
+- Ubícate en la raíz del proyecto de Microfrontend-Authors-Angular y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Users-NodeJS y ejecuta el comando: ```npm i```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm i```
 
@@ -32,6 +35,9 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Ubícate en la raíz del proyecto de Microservice-Products-NodeJS y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Users-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Microfrontend-Products-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Movies-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Books-Angular y ejecuta el comando: ```npm run start```
+- Ubícate en la raíz del proyecto de Microfrontend-Authors-Angular y ejecuta el comando: ```npm run start```
 - Ubícate en la raíz del proyecto de Client-Host-Angular y ejecuta el comando: ```npm run start```
 
 
@@ -55,5 +61,21 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 - Corriendo en: ```http://localhost:4202```
 - RemoteEntry: ```http://localhost:4202/remoteEntry.js```
 
+#### Microfrontend-Movies-Angular
+- Corriendo en: ```http://localhost:4203```
+- RemoteEntry: ```http://localhost:4203/remoteEntry.js```
+- Consume: Microservice-Movies-NodeJS (```http://localhost:3003/api/movies/{countMovies}```)
+
+#### Microfrontend-Books-Angular
+- Corriendo en: ```http://localhost:4204```
+- RemoteEntry: ```http://localhost:4204/remoteEntry.js```
+- Consume: Microservice-Books-NodeJS (```http://localhost:3004/api/books/{countBooks}```)
+
+#### Microfrontend-Authors-Angular
+- Corriendo en: ```http://localhost:4205```
+- RemoteEntry: ```http://localhost:4205/remoteEntry.js```
+- Consume: Microservice-Authors-NodeJS (```http://localhost:3005/api/authors/{countAuthors}```)
+
 #### Client-Host-Angular
 - Corriendo en: ```http://localhost:4200```
+- Rutas: ```/users```, ```/products```, ```/movies```, ```/books```, ```/authors```
