@@ -11,7 +11,7 @@ cliente servidor, con las Tecnologias de Angular y NodeJS.
 | --- | --- |
 | `npm install` | Instala las dependencias de la raíz y, vía `postinstall`, de los 11 proyectos. |
 | `npm start` | Levanta los 5 microservicios (3001-3005), los 5 microfrontends (4201-4205) y el host (4200). |
-| `npm test` | Ejecuta las pruebas con cobertura del host y de los 5 microfrontends. |
+| `npm test` | Ejecuta las pruebas con cobertura del host y de los 5 microfrontends, y las pruebas unitarias de los 5 microservicios Node. |
 | `npm run build` | Compila el host y los 5 microfrontends en paralelo. |
 | `npm run compodoc` | Genera y abre la documentación (Compodoc) de los 6 proyectos Angular. |
 
@@ -126,8 +126,9 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 ### 5️⃣ Pruebas Unitarias
 
 - Desde la raíz del repositorio, ejecuta: `npm test`
-- Corre las pruebas con cobertura del host y de los 5 microfrontends en paralelo.
-- Por proyecto, ubícate en su carpeta y ejecuta: `npm run test:coverage`
+- Corre en paralelo las pruebas con cobertura del host y de los 5 microfrontends, y las pruebas unitarias de los 5 microservicios Node.
+- Por proyecto Angular, ubícate en su carpeta y ejecuta: `npm run test:coverage`
+- Por microservicio Node, ubícate en su carpeta y ejecuta: `npm test`
 
 ### 6️⃣ Build de Producción
 
