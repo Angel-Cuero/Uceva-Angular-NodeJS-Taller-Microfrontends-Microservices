@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / salidas generadas
+dist/
+.angular/
+coverage/
+
+# Documentacion generada por Compodoc
+documentation/
+
+# Sistema
+.DS_Store
+Thumbs.db

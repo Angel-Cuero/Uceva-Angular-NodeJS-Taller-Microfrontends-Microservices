@@ -1,5 +1,12 @@
 import { User } from "../interfaces/users.interface";
 
+/**
+ * Datos simulados de usuarios utilizados en las pruebas unitarias.
+ *
+ * @remarks
+ * Este arreglo permite verificar el comportamiento de los componentes,
+ * servicios y páginas sin necesidad de realizar peticiones HTTP reales.
+ */
 export const USERS_MOCK: User[] = [
     {
         id: 1,

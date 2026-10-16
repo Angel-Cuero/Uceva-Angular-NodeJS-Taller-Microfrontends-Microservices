@@ -1,6 +1,7 @@
 {
   "name": "taller-microfrontends-microservices",
   "version": "1.0.0",
+  "description": "Taller - Arquitectura de microfrontends con Angular (Module Federation) y microservicios con NodeJS",
   "private": true,
   "scripts": {
     "postinstall": "npm run install:all",
@@ -16,20 +17,42 @@
     "install:mf-movie": "npm --prefix Microfrontend-Movies-Angular install",
     "install:mf-books": "npm --prefix Microfrontend-Books-Angular install",
     "install:mf-auth": "npm --prefix Microfrontend-Authors-Angular install",
-    "start": "concurrently --kill-others --names \"USERS-MS,PRODS-MS,MOVIE-MS,BOOKS-MS,AUTH-MS,HOST,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH\" \"npm:start:ms-users\" \"npm:start:ms-prods\" \"npm:start:ms-movie\" \"npm:start:ms-books\" \"npm:start:ms-auth\" \"npm:start:host\" \"npm:start:mf-users\" \"npm:start:mf-prods\" \"npm:start:mf-movie\" \"npm:start:mf-books\" \"npm:start:mf-auth\"",
+    "start": "concurrently --kill-others --names \"USERS-MS,PRODS-MS,MOVIE-MS,BOOKS-MS,AUTH-MS,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH,HOST\" \"npm:start:ms-users\" \"npm:start:ms-prods\" \"npm:start:ms-movie\" \"npm:start:ms-books\" \"npm:start:ms-auth\" \"npm:start:mf-users\" \"npm:start:mf-prods\" \"npm:start:mf-movie\" \"npm:start:mf-books\" \"npm:start:mf-auth\" \"npm:start:host\"",
     "start:ms-users": "npm --prefix Microservice-Users-NodeJS run start",
     "start:ms-prods": "npm --prefix Microservice-Products-NodeJS run start",
     "start:ms-movie": "npm --prefix Microservice-Movies-NodeJS run start",
     "start:ms-books": "npm --prefix Microservice-Books-NodeJS run start",
     "start:ms-auth": "npm --prefix Microservice-Authors-NodeJS run start",
-    "start:host": "npm --prefix Client-Host-Angular run start",
+    "start:host": "wait-on --timeout 180000 http://localhost:4201/remoteEntry.js http://localhost:4202/remoteEntry.js http://localhost:4203/remoteEntry.js http://localhost:4204/remoteEntry.js http://localhost:4205/remoteEntry.js && npm --prefix Client-Host-Angular run start",
     "start:mf-users": "npm --prefix Microfrontend-Users-Angular run start",
     "start:mf-prods": "npm --prefix Microfrontend-Products-Angular run start",
     "start:mf-movie": "npm --prefix Microfrontend-Movies-Angular run start",
     "start:mf-books": "npm --prefix Microfrontend-Books-Angular run start",
-    "start:mf-auth": "npm --prefix Microfrontend-Authors-Angular run start"
+    "start:mf-auth": "npm --prefix Microfrontend-Authors-Angular run start",
+    "test": "concurrently --names \"HOST,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH\" \"npm:test:host\" \"npm:test:mf-users\" \"npm:test:mf-prods\" \"npm:test:mf-movie\" \"npm:test:mf-books\" \"npm:test:mf-auth\"",
+    "test:host": "npm --prefix Client-Host-Angular run test:coverage",
+    "test:mf-users": "npm --prefix Microfrontend-Users-Angular run test:coverage",
+    "test:mf-prods": "npm --prefix Microfrontend-Products-Angular run test:coverage",
+    "test:mf-movie": "npm --prefix Microfrontend-Movies-Angular run test:coverage",
+    "test:mf-books": "npm --prefix Microfrontend-Books-Angular run test:coverage",
+    "test:mf-auth": "npm --prefix Microfrontend-Authors-Angular run test:coverage",
+    "compodoc": "concurrently --names \"HOST,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH\" \"npm:compodoc:host\" \"npm:compodoc:mf-users\" \"npm:compodoc:mf-prods\" \"npm:compodoc:mf-movie\" \"npm:compodoc:mf-books\" \"npm:compodoc:mf-auth\"",
+    "compodoc:host": "npm --prefix Client-Host-Angular run compodoc",
+    "compodoc:mf-users": "npm --prefix Microfrontend-Users-Angular run compodoc",
+    "compodoc:mf-prods": "npm --prefix Microfrontend-Products-Angular run compodoc",
+    "compodoc:mf-movie": "npm --prefix Microfrontend-Movies-Angular run compodoc",
+    "compodoc:mf-books": "npm --prefix Microfrontend-Books-Angular run compodoc",
+    "compodoc:mf-auth": "npm --prefix Microfrontend-Authors-Angular run compodoc",
+    "build": "concurrently --names \"HOST,MF-USERS,MF-PRODS,MF-MOVIE,MF-BOOKS,MF-AUTH\" \"npm:build:host\" \"npm:build:mf-users\" \"npm:build:mf-prods\" \"npm:build:mf-movie\" \"npm:build:mf-books\" \"npm:build:mf-auth\"",
+    "build:host": "npm --prefix Client-Host-Angular run build",
+    "build:mf-users": "npm --prefix Microfrontend-Users-Angular run build",
+    "build:mf-prods": "npm --prefix Microfrontend-Products-Angular run build",
+    "build:mf-movie": "npm --prefix Microfrontend-Movies-Angular run build",
+    "build:mf-books": "npm --prefix Microfrontend-Books-Angular run build",
+    "build:mf-auth": "npm --prefix Microfrontend-Authors-Angular run build"
   },
   "devDependencies": {
-    "concurrently": "^9.2.5"
+    "concurrently": "^9.2.5",
+    "wait-on": "^8.0.5"
   }
 }
