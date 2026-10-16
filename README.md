@@ -134,3 +134,22 @@ Puedes verificar Angular CLI en consola con: ```ng version```
 
 - Desde la raíz del repositorio, ejecuta: `npm run build`
 - Compila el host y los 5 microfrontends en paralelo.
+
+### 7️⃣ Documentación de la API (Swagger / OpenAPI)
+
+Cada microservicio Node expone su API documentada con **Swagger UI**
+(`swagger-jsdoc` + `swagger-ui-express`). Las especificaciones OpenAPI se generan
+automáticamente a partir de las anotaciones `@openapi` de los archivos
+`*.routes.ts` y de los schemas definidos en `src/config/swagger.schemas.ts`.
+
+| Microservicio | Swagger UI | Ruta documentada | Schema |
+| --- | --- | --- | --- |
+| Microservice-Users-NodeJS | <http://localhost:3001/api/docs> | `/api/users/{countUsers}` | `User` |
+| Microservice-Products-NodeJS | <http://localhost:3002/api/docs> | `/api/products/{countProducts}` | `Product` |
+| Microservice-Movies-NodeJS | <http://localhost:3003/api/docs> | `/api/movies/{countMovies}` | `Movie` |
+| Microservice-Books-NodeJS | <http://localhost:3004/api/docs> | `/api/books/{countBooks}` | `Book` |
+| Microservice-Authors-NodeJS | <http://localhost:3005/api/docs> | `/api/authors/{countAuthors}` | `Author` |
+
+- Abre cualquiera de las URLs con el microservicio en ejecución (`npm start` desde la raíz).
+- Todos los endpoints (`GET`) están documentados con su schema y su respuesta `201`.
+- Los proyectos Angular (host y microfrontends) **no** usan Swagger: su documentación se genera con **Compodoc** (ver sección 4️⃣).
